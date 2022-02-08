@@ -8,9 +8,9 @@ You can use them! if you want to edit or modify please read the license agreemen
 
 bash script list:
 
-1. generate-screenshots-from-pdf.sh\
+1. `generate-screenshots-from-pdf.sh`\
 Generate screenshots from a pdf file in a reduce size (800px and png8 format)
-2. rm-aux-latexfiles-v1.sh\
+2. `rm-aux-latexfiles-v1.sh`\
 For remove temporary files needed when compile a .tex (LaTeX) file.
 
 
