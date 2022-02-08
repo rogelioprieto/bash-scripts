@@ -1,9 +1,15 @@
 #!/bin/bash
 #author: Rogelio Prieto Alvarado
 #7/february/2021
-#Objective: generate screenshots from a pdf file in a reduce size (800px and png8)
+#Objective: generate a screenshot of each page of a pdf file,
+# in a reduce size (height 800px and png8 format)
 
-#Parametes: pdf filename
+
+#How to execute:
+#Parametes: pdf-filename
+#./generate-screenshots-from-pdf.sh filename.pdf
+#Note. Screenshots are saved in the OUTPUTFOLDER path, the screenshots subfolder.
+
 
 #Requirements (packages):
 #1. poppler-utils (sudo apt-get install poppler-utils)
