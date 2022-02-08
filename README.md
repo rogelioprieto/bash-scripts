@@ -9,7 +9,7 @@ You can use them! if you want to edit or modify please read the license agreemen
 ## Bash script list:
 
 1. `generate-screenshots-from-pdf.sh`\
-Generate screenshots from a pdf file in a reduce size (800px and png8 format)
+Generate screenshots from a pdf file in a reduce size (800px and png8 format).
 2. `rm-aux-latexfiles-v1.sh`\
 For remove temporary files generated when compile a `.tex` (LaTeX) file.
 
