@@ -10,3 +10,4 @@ This project is licensed under the terms of the **Creative Commons**.
 **CC BY-SA** includes the following elements:\
 - **BY** – Credit must be given to the creator
 - **SA** – Adaptations must be shared under the same terms
+
