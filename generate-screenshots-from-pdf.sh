@@ -42,7 +42,7 @@ fi
 WIDTH=800
 for file in $FILES
 do
-    convert $file -resize $WIDTHx\>  PNG8:$file
+    convert $file -resize ${WIDTH}x\>  PNG8:$file
     #example:
     #convert image.png -resize 800x\>  PNG8:image.png
 done
