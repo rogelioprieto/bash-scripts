@@ -6,17 +6,15 @@ I think can be useful for you too!
 You can use them! if you want to edit or modify please read the license agreement.
 
 
-bash script list:
+## Bash script list:
 
 1. `generate-screenshots-from-pdf.sh`\
 Generate screenshots from a pdf file in a reduce size (800px and png8 format)
 2. `rm-aux-latexfiles-v1.sh`\
-For remove temporary files needed when compile a .tex (LaTeX) file.
+For remove temporary files generated when compile a `.tex` (LaTeX) file.
 
 
-
-
-License:
+## License:
 
 This project is licensed under the terms of the Creative Commons license:
 
