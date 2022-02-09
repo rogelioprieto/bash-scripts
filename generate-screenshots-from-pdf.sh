@@ -44,11 +44,13 @@ else
     
 fi
 
+#convert $file  -bordercolor DarkGray  -border 2  -colorspace RGB   -resize ${WIDTH}x\>  -colorspace sRGB -colors 255 PNG8:$file
+
 #Step 3. Move,resize and compress png screenshots
 WIDTH=800
 for file in $FILES
 do
-    convert $file -resize ${WIDTH}x\>  PNG8:$file
+    convert $file  -bordercolor DarkGray  -border 2 -colorspace RGB -resize ${WIDTH}x\> -colorspace sRGB -colors 255 PNG8:$file
     #example:
     #convert image.png -resize 800x\>  PNG8:image.png
 done
