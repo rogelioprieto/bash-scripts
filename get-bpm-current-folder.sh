@@ -1,8 +1,7 @@
 #!/bin/bash
-#inicializar las variables que se utilizarán para generar el archivo reporte.txt
+#initialize counter variable
 counter_file=0
-tempfilename=$(date +%m-%d-%Y-%H%M%S)
-
+#process each .mp3 file
 while read -r line ; do
 	echo "=============="
     #incrementar el contador de archivos.
@@ -21,7 +20,7 @@ done <<< "$(find . -name '*.mp3'   -type f  -follow -print)"
 #explanation about this subshell: https://stackoverflow.com/questions/16854280/a-variable-modified-inside-a-while-loop-is-not-remembered
 echo "=============="
 echo "=============="
-echo $counter_file" archivos .mp3 fueron analizados."
+echo $counter_file"  .mp3 files were analyzed."
 
 
 
