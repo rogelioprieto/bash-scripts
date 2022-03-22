@@ -27,7 +27,7 @@ pdftocairo -png $1
 FILES=*.png
 OUTPUTFOLDER=screenshots
 #echo "FILES:"$FILES
-COUNTFILES=$(ls | wc -l)
+COUNTFILES=$(ls *.png | wc -l)
 
 #Step 3. create a subfolder to move and save the screenshots
 if [ $COUNTFILES -eq 0 ]
