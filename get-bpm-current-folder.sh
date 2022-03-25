@@ -1,7 +1,7 @@
 #!/bin/bash
 #author: Rogelio Prieto Alvarado
 #22/march/2022
-#Objective: calculate the bpm for each mp3 in this directory or any subdirectories. Tag each file (mp3 tag).
+#Objective: calculate the bpm (beats per minute) for each mp3 in this directory or any subdirectories. Tag each file (mp3 tag).
 
 #initialize counter variable
 counter_file=0
@@ -24,7 +24,3 @@ done <<< "$(find . -name '*.mp3'   -type f  -follow -print)"
 echo "=============="
 echo "=============="
 echo $counter_file"  .mp3 files were analyzed."
-
-
-
-
