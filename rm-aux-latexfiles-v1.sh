@@ -39,6 +39,6 @@ echo "%---------------------------------------------------------"
 echo "Se eliminaron los archivos temporales generados por LaTeX."
 echo "*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.log,*.out,"
 echo "*.synctex.gz,*.toc,*.lol,*.lot,*.snm,*.vrb,*.nav,"
-echo "*.idx,*.ilg,*.ind,*.glo,*.gls,*.glg, *.sta *.stp"
+echo "*.idx,*.ilg,*.ind,*.glo,*.gls,*.glg, *.sta *.stp, *.xmpdata"
 echo "%---------------------------------------------------------"
 
