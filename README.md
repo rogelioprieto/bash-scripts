@@ -13,6 +13,8 @@ Generate screenshots from a pdf file in a reduce size (800px and png8 format).
 2. `rm-aux-latexfiles-v1.sh`\
 For remove temporary files generated when compile a `.tex` (LaTeX) file.
 
+3. `get-bpm-current-folder.sh`\
+Calculate the bpm (beats per minute) for each mp3 in this directory or any subdirectories. Tag each file (mp3 tag).
 
 ## License:
 
