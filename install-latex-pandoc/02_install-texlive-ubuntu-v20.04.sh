@@ -32,8 +32,8 @@ sudo dpkg-reconfigure libpaper1
 #sudo paperconfig --paper letter
 
 
- 
- 
+#setup tlmgr (package manager) in user mode
+tlmgr init-usertree
 sudo apt-get -y install xzdec
 tlmgr repository add ftp://tug.org/historic/systems/texlive/2019/tlnet-final
 tlmgr repository list
@@ -41,7 +41,7 @@ tlmgr repository remove http://mirror.ctan.org/systems/texlive/tlnet
 tlmgr option repository ftp://tug.org/historic/systems/texlive/2019/tlnet-final
 
 rm myfile.aux  myfile.fdb_latexmk  myfile.fls  myfile.log
-
+echo "---------------------------------------------------------------------"
 echo "---------------------------------------------------------------------"
 echo " LaTeX was installed with this packages and settings:"
 echo "1. texlive-latex-base"
@@ -51,6 +51,7 @@ echo "4. texlive-fonts-recommended"
 echo "5. cm-super package"
 echo "6. letter paper size set as default"
 echo "7. The default ftp repository was updated"
+echo "---------------------------------------------------------------------"
 echo "---------------------------------------------------------------------"
 echo "%%%%%%%%%%% IMPORTANT NOTE!!!! %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%"
 echo "to install new TexLive (LaTeX) packages you should add the "
