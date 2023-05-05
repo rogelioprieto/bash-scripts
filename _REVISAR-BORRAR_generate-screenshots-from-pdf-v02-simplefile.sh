@@ -53,7 +53,7 @@ for file in $FILES
 do
 
     name=${file%.*}
-    extension=${file#*.}
+    extension=${file##*.}
 
     #option 1. using RGB sRGB source: https://imagemagick.org/script/formats.php
 
