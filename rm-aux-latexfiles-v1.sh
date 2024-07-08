@@ -20,7 +20,7 @@ if [ "$1" = '--help' ]; then
 	#echo "está consultando la ayuda"
 	echo "rm-aux-latexfiles [path]"
 	echo "[path] is the folder where you want to delete the auxiliar LaTeX files."
-	echo "This script deletes the *.aux, *.bbl, *.blg, *.fdb_latexmk, *.fls, *.log, *.out, *.synctex*.gz, *.toc, *.lol, *.lot, *.snm, *.vrb, *.nav, *.idx, *.ilg, *.ind,*.glo,*.gls,*.glg, *.sta *.stp files."
+	echo "This script deletes the *.aux, *.bbl, *.blg, *.fdb_latexmk, *.fls, *.log, *.out, *.synctex*.gz, *.toc, *.lol, *.lot, *.snm, *.vrb, *.nav, *.idx, *.ilg, *.ind,*.glo,*.gls,*.glg, *.sta *.stp *.xmpdata *.lof files."
 	exit 1
 
 fi
@@ -34,11 +34,12 @@ fi
 
 
 
-rm -f *.{aux,bbl,blg,fdb_latexmk,fls,log,out,synctex.gz,toc,lol,lot,snm,vrb,nav,idx,ilg,ind,glo,gls,glg,sta,stp,xmpdata} 
+rm -f *.{aux,bbl,blg,fdb_latexmk,fls,log,out,synctex.gz,toc,lol,lot,snm,vrb,nav,idx,ilg,ind,glo,gls,glg,sta,stp,xmpdata.lof} 
 echo "%---------------------------------------------------------"
 echo "Se eliminaron los archivos temporales generados por LaTeX."
 echo "*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.log,*.out,"
 echo "*.synctex.gz,*.toc,*.lol,*.lot,*.snm,*.vrb,*.nav,"
 echo "*.idx,*.ilg,*.ind,*.glo,*.gls,*.glg, *.sta *.stp, *.xmpdata"
+echo "*.lof"
 echo "%---------------------------------------------------------"
 
