@@ -34,7 +34,7 @@ fi
 
 
 
-rm -f *.{aux,bbl,blg,fdb_latexmk,fls,log,out,synctex.gz,toc,lol,lot,snm,vrb,nav,idx,ilg,ind,glo,gls,glg,sta,stp,xmpdata.lof} 
+rm -f *.{aux,bbl,blg,fdb_latexmk,fls,log,out,synctex.gz,toc,lol,lot,snm,vrb,nav,idx,ilg,ind,glo,gls,glg,sta,stp,xmpdata,lof} 
 echo "%---------------------------------------------------------"
 echo "Se eliminaron los archivos temporales generados por LaTeX."
 echo "*.aux,*.bbl,*.blg,*.fdb_latexmk,*.fls,*.log,*.out,"
