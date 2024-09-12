@@ -2,8 +2,10 @@
 #Rogelio Prieto
 #sept 2024
 
+#select the fastest apt repository in Ubuntu and setup the config file.
+
 #how to use this script
-#execute the script as normal user and after that your password will be required to execute sed command
+#execute the script as a normal user, and after that, your password will be required to execute the sed command
 #./modify-url-ubuntu-repository.sh
 
 #make a backup
