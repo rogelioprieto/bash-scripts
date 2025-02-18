@@ -1,6 +1,9 @@
 #!/bin/bash
 
-#sources: https://itsfoss.com/clear-apt-cache/
+#sources:
+# https://itsfoss.com/clear-apt-cache/
+# https://gist.github.com/bearlike/5d9fa646d1171fa996f09e82ccfc6eb0
+
 
 #get the size
 sudo du -sh /var/cache/apt
