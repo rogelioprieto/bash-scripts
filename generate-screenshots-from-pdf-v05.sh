@@ -68,7 +68,7 @@ else
 			fi
 			
 			
-			pdftocairo -png "${1}" -f $firstpage -l $lastpage
+			pdftocairo -png -scale-to 1920 "${1}"  -f $firstpage -l $lastpage
 		
 		fi
 	fi
