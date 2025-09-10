@@ -1,6 +1,7 @@
 #!/bin/bash
 #author: Rogelio Prieto Alvarado
 #06/april/2022
+#10/sept/2025 updated
 #Objective: reduce pdf file size.
 
 #requirements:
@@ -13,10 +14,7 @@ then
 	exit
 fi
 
-filename=$(basename -- "$1")
-extension="${filename##*.}"
-#output="${filename%.*}-output.${extension}"
-output="${filename%.*}-output"
+
 
 echo "Files will be created with these qualities:"
 echo "/screen    (72 DPI), smallest possible file size"
@@ -32,9 +30,10 @@ echo "----"
 #/prepress   highest quality setting 
 
 
-
-
-
+filename=$(basename -- "$1")
+extension="${filename##*.}"
+#output="${filename%.*}-output.${extension}"
+output="${filename%.*}-output"
 
 for quality in screen ebook printer default prepress ;
 do
@@ -49,8 +48,6 @@ do
 #      echo "Command failed."
     fi   
 done
-
-
 
 
 
