@@ -51,5 +51,6 @@ done
 
 
 
+
 #Source by: Adobe in
 #https://www.adobe.com/acrobat/hub/how-to/how-to-compress-pdf-in-linux
