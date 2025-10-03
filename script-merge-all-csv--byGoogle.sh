@@ -1,7 +1,13 @@
 #!/bin/bash
 
 # Define the output file name
-OUTPUT_FILE="merged_output_$(date +"%Y-%m-%d_%H%M%S").txt"
+OUTPUT_FILE="merged_output_$(date +"%Y-%m-%d_%H%M%S")"
+TEMP_FILE=${OUTPUT_FILE}
+
+OUTPUT_FILE=$OUTPUT_FILE".TEMP"
+
+echo $TEMP_FILE
+echo $OUTPUT_FILE
 
 # Remove the output file if it already exists to prevent appending to old data
 #TODO rm -f "$OUTPUT_FILE"
@@ -28,8 +34,28 @@ for file in *.csv; do
     fi
 done
 
+
+
+echo "---"
 echo "All CSV files merged into $OUTPUT_FILE with a single header."
 
 wc -l *.csv
-echo "------restar (n_files)-1 líneas de header y es igual a:"
 wc -l "$OUTPUT_FILE"
+
+
+
+CSV_COUNTER=$(find . -maxdepth 1 -type f -name "*.csv" | wc -l)
+HEADER_LINES_OMMITED=$(($CSV_COUNTER-1)) #n_files -1 are the header lines not included
+OUTPUT_LINES=$(wc -l "$OUTPUT_FILE" | cut -d" " -f1)
+SUM=$((OUTPUT_LINES + HEADER_LINES_OMMITED))
+
+echo -e "\n"$SUM"-"$HEADER_LINES_OMMITED"="$OUTPUT_LINES
+echo $HEADER_LINES_OMMITED" header lines were ommited intentionally."
+
+# add the csv extension to output file, this final step avoid te be processed as input at the previous steps
+mv ${OUTPUT_FILE} "${TEMP_FILE}.csv"
+OUTPUT_FILE=$TEMP_FILE".csv"
+echo -e "\nThe OUTPUT file has now the csv extension:"
+echo $OUTPUT_FILE
+echo "---"
+
