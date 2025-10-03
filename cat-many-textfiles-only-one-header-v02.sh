@@ -26,7 +26,6 @@ CSV_COUNTER=$(find . -maxdepth 1 -type f -name "*.csv" | wc -l)
 HEADER_LINES_OMMITED=$(($CSV_COUNTER-2)) #n_files -1 are the header lines not included and -1 for counting the output file
 OUTPUT_LINES=$(wc -l "$OUTPUT_FILE" | cut -d" " -f1)
 SUM=$((OUTPUT_LINES + HEADER_LINES_OMMITED))
-
 echo -e "\n"$SUM"-"$HEADER_LINES_OMMITED"="$OUTPUT_LINES
 echo $HEADER_LINES_OMMITED" header lines were ommited intentionally."
 echo "---"
