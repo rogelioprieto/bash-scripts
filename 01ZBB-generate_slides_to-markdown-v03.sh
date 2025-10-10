@@ -26,9 +26,34 @@ png_count=$(ls *.png | wc -l)
 # first, create the markdown header
 echo -e "% ${TITLE}\n% ${AUTHOR}\n% ${DATE}\n" > $OUTPUT_FILE
 
+
+
 # add a section slide
-echo "# Section">> $OUTPUT_FILE
+echo "# kNN using Standard Scaler">> $OUTPUT_FILE
 # add a slide for each png file
-for img in *.png; do
+for img in knn-try02-StandardScaler-*.png; do
     echo -e "## \n\n![$img]($img)\n\n---\n"
-done >> $OUTPUT_FILE && echo "slides.md was generated with $png_count slides."
+done >> $OUTPUT_FILE 
+
+echo -e "## \n\n$(cat knn-try02-StandardScaler-*best-values.txt)\n\n---\n" >> $OUTPUT_FILE
+
+# add a section slide
+echo "# kNN using Robust Scaler">> $OUTPUT_FILE
+# add a slide for each png file
+for img in knn-try02-RobustScaler-*.png; do
+    echo -e "## \n\n![$img]($img)\n\n---\n"
+done >> $OUTPUT_FILE 
+
+echo -e "## kNN using RobustScaler - Results \n\n$(cat knn-try02-RobustScaler-*best-values.txt)\n\n---\n" >> $OUTPUT_FILE
+
+
+echo -e "## kNN. Standard vs Robust Scaler Results \n\n$(cat knn-try02-StandardScaler-*best-values.txt)\n\n\n\n$(cat knn-try02-RobustScaler-*best-values.txt)\n\n---\n" >> $OUTPUT_FILE
+
+echo "slides.md was generated with $png_count slides."
+
+# add a section slide
+#echo "# Section">> $OUTPUT_FILE
+# add a slide for each png file
+#for img in *.png; do
+#    echo -e "## \n\n![$img]($img)\n\n---\n"
+#done >> $OUTPUT_FILE && echo "slides.md was generated with $png_count slides."
