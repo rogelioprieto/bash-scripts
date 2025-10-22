@@ -29,7 +29,7 @@ for file in *.csv; do
     # if [ "$file" != "$(basename "$FIRST_FILE")" ]; then
     # Skip the output csv file just created
     if [ "$file" != "$(basename "$OUTPUT_FILE")" ]; then
-        # Append the content of the file (skipping the header) to the output file
+        #Append the content of the file (skipping the header) to the output file
         tail -n +2 "$file" >> "$OUTPUT_FILE"
     fi
 done
