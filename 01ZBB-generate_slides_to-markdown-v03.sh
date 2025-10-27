@@ -33,6 +33,9 @@ png_count=$(ls *.png | wc -l)
 # first, create the markdown header
 echo -e "% ${TITLE}\n% ${AUTHOR}\n% ${DATE}\n" > $OUTPUT_FILE
 
+# add a slide section - dataset
+echo -e "# Dataset\n\n---\n" >> $OUTPUT_FILE
+
 # add a slide to specify dataset
 #echo -e "## Dataset\n\n${DATASET}\n\n$(($(wc -l merge*.csv | cut -d" " -f1)-1)) registros\n\n---\n" >> $OUTPUT_FILE
 echo -e "## Dataset\n\n$(cat knn-try02-dataset.txt)\n\n---\n">> $OUTPUT_FILE
@@ -58,8 +61,11 @@ done >> $OUTPUT_FILE
 echo -e "## kNN using Robust Scaler - Results \n\n$(cat knn-try02-RobustScaler-*best-values.txt)\n\n---\n" >> $OUTPUT_FILE
 
 ###Final section
-# add a comparative slide
-echo -e "## kNN. Standard vs Robust Scaler\n\n\
+# add a comparative slide section
+echo -e "# kNN. Standard vs Robust Scaler\n\n---\n" >> $OUTPUT_FILE
+
+# add a comparative slide section
+echo -e "## kNN. Standard vs Robust Scaler - Results\n\n\
 ### kNN Standard Scaler\n\n \
 $(cat knn-try02-StandardScaler-*best-values.txt)\n\n\n\n\
 ### kNN Robust Scaler\n\n\

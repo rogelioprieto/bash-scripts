@@ -10,7 +10,8 @@ outputfile=TESTING.txt
 extension=csv
 #add the header to the outputfile
 #ls -1 *.$extension | head -1 > ${outputfile}
-ls -1 *.csv | head -1  | tr "\n" " " | sed "s/\ $//" | xargs -0 head -1 > ${outputfile}
+#ls -1 *.csv | head -1  | tr "\n" " " | sed "s/\ $//" | xargs -0 head -1 > ${outputfile}
+ls -1 *.csv | head -1 > ${outputfile}
 
 
 #add each file (without headers) to the output
