@@ -45,5 +45,6 @@ wc -l "${outputfile}"
 # calculate the headers lines omitted in the output file
 # lenght of array
 headers=${#inputfiles[@]}
-echo "NOTE. Consider $(($headers-1)) lines less in the outputfile due to just one header line is keeped."
+Consider 2 fewer lines in the output file, since only one header line is kept.
+echo "NOTE. Consider -""$(($headers-1)) lines in the output file, since only one header line remains."
 echo "---"
