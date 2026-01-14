@@ -38,13 +38,12 @@ done
 
 # show statistics
 echo -e "Statistics\n"
-echo -e "INPUT\n---\nLINES FILENAMES"
+echo -e "⬆️  INPUT\n---\nLINES FILENAMES"
 wc -l "${inputfiles[@]}"
-echo -e "---\n\nOUTPUT\n---"
+echo -e "---\n\n⬇️  OUTPUT\n---"
 wc -l "${outputfile}"
 # calculate the headers lines omitted in the output file
 # lenght of array
 headers=${#inputfiles[@]}
-Consider 2 fewer lines in the output file, since only one header line is kept.
 echo "NOTE. Consider -""$(($headers-1)) lines in the output file, since only one header line remains."
 echo "---"
