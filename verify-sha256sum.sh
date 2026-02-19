@@ -1,14 +1,14 @@
 #/bin/bash
 #Rogelio Prieto
 #july 2025
-#objective: verify md5 between a downloaded file and md5 string.
+#objective: verify SHA256sum between a downloaded file and SHA256sum string.
 
 case $# in
   2)
   	echo "You have provided two arguments"
 	#first parameter is the installer file
 	DOWNLOADEDFILE=$1
-	#second parameter is the md5 string or a file contaning the string md5 string.
+	#second parameter is the SHA256sum string or a file contaning the SHA256sum string.
 	MD5STRINGFILE=$2  	
   	if [ -f "${1}" ] #validate file exists
 		then
