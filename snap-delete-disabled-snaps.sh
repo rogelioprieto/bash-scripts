@@ -8,7 +8,7 @@
 # ⚠️ CLOSE ALL SNAPS BEFORE RUNNING THIS
 # Source, based in the script: https://superuser.com/a/1330590
 
-set -eu # Reference: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html
+
 
 
 COUNT=$(LANG=C snap list --all | tail +2 | grep 'disabled' | wc -l)
@@ -16,6 +16,8 @@ if [ $COUNT -eq 0 ]; then
     echo "No disabled snap packages found. Your system is already clean!"
     exit 0
 fi
+
+set -eu # Reference: https://www.gnu.org/software/bash/manual/html_node/The-Set-Builtin.html
 
 # Show the disabled snap list
 LANG=C snap list --all | grep --color=always  disabled
