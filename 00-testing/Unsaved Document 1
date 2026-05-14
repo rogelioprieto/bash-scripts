@@ -1,0 +1,14 @@
+# Source - https://stackoverflow.com/a/64914952
+# Posted by DamianK
+# Retrieved 2026-05-14, License - CC BY-SA 4.0
+
+#!/bin/bash
+
+while IFS=, read  -r Codigo Apellido Nombre Carrera Facultad Rol; 
+do
+
+  password="Pass123"
+  useradd -c "${Codigo} ${Apellido}" -m -p ${password} -s /bin/bash ${Codigo}
+
+done < Usuarios.csv
+
