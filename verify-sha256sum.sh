@@ -30,9 +30,9 @@ case $# in
 			#echo "⚠️  No existe el archivo: ${1}"
 			#exit 1
 	fi
-
+	echo "--------------------------------"
 	echo $MYFIRST; echo $MYSECOND
-	#echo "--------------------------------"
+	# echo "--------------------------------"
 	echo $(printf --  '-%.0s' {1..32}) #print 32 dashes and newline after all
 	if [[ "$MYFIRST" == "$MYSECOND" ]]
 		then
