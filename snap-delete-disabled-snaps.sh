@@ -9,6 +9,8 @@
 # Source, based in the script: https://superuser.com/a/1330590
 
 
+#To show errors:
+# set -exu
 
 
 COUNT=$(LANG=C snap list --all | tail +2 | grep 'disabled' | wc -l)
@@ -28,9 +30,16 @@ read -p "Proceed to delete ALL these disabled snap apps (Y/N)? " response
 #response=${response,,}
 response=$(echo "$response" | tr '[:upper:]' '[:lower:]')
 
+echo "Resṕonse was: "$response
 if [ "$response" = "y" ]; then
+<<<<<<< HEAD
     # Ensure the script is run with root privileges
     #if [[ $EUID -ne 0 ]]; then
+=======
+    echo "ingresé al yes"
+    # Ensure the script is run with root privileges
+    # if [[ $EUID -ne 0 ]]; then
+>>>>>>> fef6584e2cf633319687900b4476120b178ee931
     if [ "$(id -u)" -ne 0 ]; then #0 if you're root, another (like 1000) for normal user.
         echo "Please run this script as root (use sudo)."
         exit 1
