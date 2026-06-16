@@ -29,13 +29,13 @@ read -p "Proceed to delete ALL these disabled snap apps (Y/N)? " response
 response=$(echo "$response" | tr '[:upper:]' '[:lower:]')
 
 if [ "$response" = "y" ]; then
-    Ensure the script is run with root privileges
-    if [[ $EUID -ne 0 ]]; then
+    # Ensure the script is run with root privileges
+    #if [[ $EUID -ne 0 ]]; then
     if [ "$(id -u)" -ne 0 ]; then #0 if you're root, another (like 1000) for normal user.
         echo "Please run this script as root (use sudo)."
         exit 1
     fi
-    
+
     echo "Starting deleting the disabled snaps..."
     LANG=C snap list --all | awk '/disabled/{print $1, $3}' |
     while read snapname revision; do
@@ -44,6 +44,7 @@ if [ "$response" = "y" ]; then
     echo "Deleting cache"
     sudo sh -c 'rm /var/lib/snapd/cache/*'
     echo -e "---\nDeleted complete."
+
 else
     echo "Cancelled. None of the snap apps were deleted."
 fi
