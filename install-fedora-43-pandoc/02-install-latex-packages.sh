@@ -5,6 +5,8 @@
 
 # Install latex packages required by the beamer template (slides template)
 sudo dnf install texlive-pgf texlive-upquote texlive-ulem
+# Install LaTeX package required by RPA report template
+sudo dnf install 'tex(footnote.sty)'
 
 echo -e "\n---------------------------------------------------------------------"
 echo "---------------------------------------------------------------------"
