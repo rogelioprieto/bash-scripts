@@ -13,5 +13,10 @@ sudo modprobe btusb
 # Restart the bluetooth background service
 sudo systemctl start bluetooth
 
+# Force-clear any RF-kill software blocks on the adapter
+sudo rfkill unblock bluetooth
+sleep 1
+
 # Bring the hardware state back online 
 sudo hciconfig hci0 up
+
