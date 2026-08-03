@@ -3,6 +3,9 @@
 #july 2025
 #objective: verify SHA256sum between a downloaded file and SHA256sum string.
 
+# TODO short way
+# echo "PASTE_YOUR_SHA256_STRING_HERE filename.ext" | sha256sum --check
+
 case $# in
   2)
   	echo "You have provided two arguments"
@@ -59,4 +62,6 @@ esac
 
 #trying in macos
 #md5 -r BasicTeX.pkg | cut -d " " -f1 | awk -v ORS="" '{print $1}'  | pbcopy && cat BasicTeX.pkg.md5 | cut -d " " -f1 | awk -v ORS="" '{print $1}' | grep pbpaste
+
+
 
