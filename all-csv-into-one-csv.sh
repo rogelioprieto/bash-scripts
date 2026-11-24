@@ -3,6 +3,13 @@
 # date: 19/sept/2025
 # Rogelio Prieto
 
+# Another way, using awk:
+#awk 'FNR==1 && NR!=1{next;}{print}' *.csv > combined.csv
+#
+# Explanation:
+# FNR==1 && NR!=1{next;}: Skips the first line (header) of every file except for the very first file processed.
+# combined.csv: The output file. It is automatically excluded from the wildcard match *.csv because awk reads the files before creating the output stream.
+
 
 #head -1 0.\ Monitoreo\ del\ 31-Enero\ al\ 5-Feb.csv > myall.txt; for f in *.csv; do   echo "${f}"; sed '1d' "${f}">> myall.txt;  done
 
